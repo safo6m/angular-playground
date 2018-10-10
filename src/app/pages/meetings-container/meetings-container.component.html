@@ -3,5 +3,6 @@
 <div *ngFor="let meeting of meetings">
   <app-meeting
     [meeting]="meeting"
+    (deleteMeeting)="onMeetingDelete($event)"
   ></app-meeting>
 </div>

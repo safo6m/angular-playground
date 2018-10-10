@@ -17,4 +17,8 @@ export class MeetingsContainerComponent implements OnInit {
   ngOnInit() {
     this.meetings = this.meetingService.meetings;
   }
+
+  public onMeetingDelete(meeting: Meeting) {
+    this.meetings = this.meetings.filter((originalMeeting: Meeting) => meeting !== originalMeeting);
+  }
 }
