@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MeetingsService } from '../../services/meetings/meetings.service';
+import { Meeting } from '../../model/meeting.model';
 
 @Component({
   selector: 'app-meetings-container',
@@ -7,12 +8,13 @@ import { MeetingsService } from '../../services/meetings/meetings.service';
   styleUrls: ['./meetings-container.component.scss']
 })
 export class MeetingsContainerComponent implements OnInit {
+  public meetings: Array<Meeting>;
 
   constructor(
     private meetingService: MeetingsService
   ) { }
 
   ngOnInit() {
-    console.log(this.meetingService.meetings);
+    this.meetings = this.meetingService.meetings;
   }
 }
