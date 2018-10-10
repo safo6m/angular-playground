@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MeetingsService } from '../../services/meetings/meetings.service';
 
 @Component({
   selector: 'app-meetings-container',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeetingsContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private meetingService: MeetingsService
+  ) { }
 
   ngOnInit() {
+    console.log(this.meetingService.meetings);
   }
-
 }
