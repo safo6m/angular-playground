@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Meeting } from './../../models/meeting.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-meeting',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meeting.component.scss']
 })
 export class MeetingComponent implements OnInit {
+  @Input() meeting: Meeting;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.meeting);
   }
 
 }

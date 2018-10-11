@@ -1,5 +1,7 @@
-<p>
-  meetings-container works!
-</p>
+<h2>Meeting Container</h2>
 
-<app-meeting></app-meeting>
+<div *ngFor="let meeting2 of meetings">
+  <app-meeting
+    [meeting]="meeting2"
+  ></app-meeting>
+</div>
