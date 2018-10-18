@@ -1,5 +1,5 @@
 import { Meeting } from './../../models/meeting.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-meeting',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MeetingComponent implements OnInit {
   @Input() meeting: Meeting;
+  @Output() deleteMeeting: EventEmitter<Meeting> = new EventEmitter();
 
   constructor() { }
 
@@ -15,4 +16,7 @@ export class MeetingComponent implements OnInit {
     console.log(this.meeting);
   }
 
+  onDeleteClick(): void {
+    this.deleteMeeting.emit(this.meeting);
+  }
 }

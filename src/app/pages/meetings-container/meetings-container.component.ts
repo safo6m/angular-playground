@@ -18,4 +18,7 @@ export class MeetingsContainerComponent implements OnInit {
     this.meetings = this.meetingsService.meetings;
   }
 
+  onDeleteMeeting(meeting: Meeting): void {
+    this.meetings = this.meetings.filter((m: Meeting) => m !== meeting);
+  }
 }
