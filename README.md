@@ -1,6 +1,14 @@
-# Meetings
+# Meetings Demo App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+Demo application used as a playground for describing the basic Angular concepts.
+
+It covers the basics of:
+
+* folder structure
+* routing - defining routes, nesting
+* services - creating new services, dependency injection
+* modules
+* components - Input, Output, ngFor
 
 ## Development server
 
